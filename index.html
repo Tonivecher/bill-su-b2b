@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#07100d" />
+    <meta
+      name="description"
+      content="Bill.su — регулярные платежи через СБП для подписок, абонементов и регулярных услуг бизнеса."
+    />
+    <title>Bill.su — регулярные платежи через СБП для бизнеса</title>
+    <link rel="canonical" href="https://bill.su/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://bill.su/" />
+    <meta property="og:site_name" content="Bill.su" />
+    <meta property="og:title" content="Регулярные платежи через СБП — для бизнеса" />
+    <meta
+      property="og:description"
+      content="Подписки, абонементы и другие регулярные платежи. Техническое подключение — до недели."
+    />
+    <meta property="og:image" content="https://bill.su/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var savedTheme = localStorage.getItem("bill-theme");
+          var systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          var theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : systemTheme;
+          document.documentElement.dataset.theme = theme;
+          document.querySelector('meta[name="theme-color"]').setAttribute(
+            "content",
+            theme === "light" ? "#ecece5" : "#07100d",
+          );
+        } catch (_error) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+      window.BILL_CONFIG = { formEndpoint: "" };
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Bill.su",
+        "url": "https://bill.su/",
+        "inLanguage": "ru-RU",
+        "description": "B2B-сервис рекуррентных платежей через СБП"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <div class="header-shell">
+        <a class="wordmark" href="#top" aria-label="Bill.su — на главную">
+          <span class="wordmark-mark" aria-hidden="true">b<span>.</span></span>
+          <span class="wordmark-text">bill<span>.</span>su</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#product">Продукт</a>
+          <a href="#cases">Для кого</a>
+          <a href="#connection">Подключение</a>
+          <a href="#faq">Вопросы</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Включить светлую тему">
+            <span class="theme-toggle-track" aria-hidden="true">
+              <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3.5"></circle>
+                <path d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3"></path>
+              </svg>
+              <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24">
+                <path d="M20 15.2A8 8 0 0 1 8.8 4a8.2 8.2 0 1 0 11.2 11.2Z"></path>
+              </svg>
+              <span class="theme-toggle-thumb"></span>
+            </span>
+          </button>
+          <a class="header-cta magnetic-control" href="#application" data-magnetic>
+            <span>Оставить заявку</span>
+            <svg viewBox="0 0 18 18" aria-hidden="true">
+              <path d="M4 9h9M9.5 5.5 13 9l-3.5 3.5"></path>
+            </svg>
+          </a>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+            <span class="sr-only">Открыть меню</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="Мобильная навигация" hidden>
+        <a href="#product">Продукт</a>
+        <a href="#cases">Для кого</a>
+        <a href="#connection">Подключение</a>
+        <a href="#faq">Вопросы</a>
+        <a class="mobile-menu-cta" href="#application">Оставить заявку</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="page-shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow hero-intro hero-intro-1"><span></span>B2B · Рекуррентные платежи</p>
+            <h1 id="hero-title" class="hero-title">
+              <span class="hero-line hero-intro hero-intro-2">Регулярные платежи</span>
+              <span class="hero-line hero-line-editorial hero-intro hero-intro-3">через СБП</span>
+              <span class="hero-line hero-intro hero-intro-4">для бизнеса.</span>
+            </h1>
+            <p class="hero-lede hero-intro hero-intro-5">
+              Bill.su подключает подписки, абонементы и другие регулярные платежи. Техническое подключение — до недели.
+            </p>
+            <div class="hero-actions hero-intro hero-intro-6">
+              <a class="button button-primary magnetic-control" href="#application" data-magnetic data-track="hero-application">
+                <span>Оставить заявку</span>
+                <span class="button-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20"><path d="M4.5 10h10M10.5 6l4 4-4 4"></path></svg>
+                </span>
+              </a>
+              <a class="button button-quiet" href="#connection">
+                <span>Как проходит подключение</span>
+              </a>
+            </div>
+            <dl class="hero-facts hero-intro hero-intro-7" aria-label="Условия подключения и выплат">
+              <div>
+                <dt>Подключение</dt>
+                <dd>до недели</dd>
+              </div>
+              <div>
+                <dt>Выплаты</dt>
+                <dd>T+3 напрямую от НКО</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="connected-field hero-intro hero-intro-4" data-field aria-hidden="true">
+            <svg class="field-routes" viewBox="0 0 620 620" preserveAspectRatio="none">
+              <path class="field-route route-a" d="M308 309C224 210 162 184 95 152"></path>
+              <path class="field-route route-b" d="M312 309C406 213 475 195 540 166"></path>
+              <path class="field-route route-c" d="M310 313C405 398 459 424 529 466"></path>
+              <path class="field-route route-d" d="M306 314C230 414 173 449 91 476"></path>
+              <path class="field-orbit" d="M166 176C260 78 418 83 503 192C590 304 531 467 397 518C264 568 113 486 91 348C79 277 107 218 166 176Z"></path>
+            </svg>
+
+            <div class="field-halo halo-one"></div>
+            <div class="field-halo halo-two"></div>
+
+            <div class="field-node-wrap node-subscription">
+              <div class="field-node" data-magnetic data-magnetic-strength="0.45">
+                <span class="node-signal"></span>
+                <span>Подписки</span>
+              </div>
+            </div>
+            <div class="field-node-wrap node-membership">
+              <div class="field-node" data-magnetic data-magnetic-strength="0.5">
+                <span class="node-signal"></span>
+                <span>Абонементы</span>
+              </div>
+            </div>
+            <div class="field-node-wrap node-service">
+              <div class="field-node" data-magnetic data-magnetic-strength="0.4">
+                <span class="node-signal"></span>
+                <span>Услуги</span>
+              </div>
+            </div>
+            <div class="field-node-wrap node-recurring">
+              <div class="field-node field-node-muted" data-magnetic data-magnetic-strength="0.35">
+                <span class="node-signal"></span>
+                <span>Другие модели</span>
+              </div>
+            </div>
+
+            <div class="field-core" data-magnetic data-magnetic-strength="0.2">
+              <div class="field-core-shell">
+                <span class="field-core-label">bill<span>.</span>su</span>
+                <span class="field-core-caption">регулярный цикл</span>
+              </div>
+              <span class="core-orbit orbit-a"></span>
+              <span class="core-orbit orbit-b"></span>
+            </div>
+
+            <span class="field-pulse pulse-a"></span>
+            <span class="field-pulse pulse-b"></span>
+            <span class="field-index field-index-top">01 · CONNECTED FIELD</span>
+            <span class="field-index field-index-bottom">SBP · RECURRING</span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#product" aria-label="Перейти к описанию продукта">
+          <span>Смотреть продукт</span>
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v11M5.5 10.5 9 14l3.5-3.5"></path></svg>
+        </a>
+      </section>
+
+      <section class="section product-section" id="product" aria-labelledby="product-title">
+        <div class="page-shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span></span>Что делает Bill.su</p>
+            <h2 id="product-title">Подключает регулярные платежи <em>через СБП.</em></h2>
+            <p>
+              Для бизнеса, где оплата повторяется: по подписке, абонементу или регулярной услуге. Без выдуманных обещаний и лишней сложности на странице.
+            </p>
+          </div>
+
+          <div class="product-stage reveal" aria-label="Сценарии регулярных платежей через СБП">
+            <div class="stage-copy">
+              <span class="stage-number">01 / 03</span>
+              <h3>Одна понятная модель для повторяющейся оплаты</h3>
+              <p>Bill.su рассчитан на компании с регулярной моделью платежей.</p>
+              <ul class="plain-list">
+                <li><span></span>Подписочные продукты</li>
+                <li><span></span>Абонементы</li>
+                <li><span></span>Регулярные услуги</li>
+              </ul>
+            </div>
+
+            <div class="rhythm-object" aria-hidden="true">
+              <div class="rhythm-orbit rhythm-orbit-outer"></div>
+              <div class="rhythm-orbit rhythm-orbit-inner"></div>
+              <div class="rhythm-label rhythm-label-a">СБП</div>
+              <div class="rhythm-label rhythm-label-b">цикл</div>
+              <div class="rhythm-label rhythm-label-c">T+3</div>
+              <div class="rhythm-center">
+                <span class="rhythm-dot"></span>
+                <strong>Регулярный<br />платёж</strong>
+                <small>для бизнеса</small>
+              </div>
+              <span class="rhythm-runner runner-one"></span>
+              <span class="rhythm-runner runner-two"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cases-section" id="cases" aria-labelledby="cases-title">
+        <div class="page-shell">
+          <div class="section-heading section-heading-row reveal">
+            <div>
+              <p class="eyebrow"><span></span>Для кого</p>
+              <h2 id="cases-title">Там, где платёж <em>повторяется.</em></h2>
+            </div>
+            <p>Выберите сценарий — описание раскроется здесь же, без неожиданного перехода на другую страницу.</p>
+          </div>
+
+          <div class="cases-layout reveal">
+            <div class="case-tabs" role="tablist" aria-label="Сценарии использования">
+              <button id="tab-subscriptions" type="button" role="tab" aria-selected="true" aria-controls="panel-subscriptions" data-case-tab="subscriptions">
+                <span class="case-tab-index">01</span>
+                <span class="case-tab-name">Подписки</span>
+                <span class="case-tab-indicator" aria-hidden="true"></span>
+              </button>
+              <button id="tab-memberships" type="button" role="tab" aria-selected="false" aria-controls="panel-memberships" tabindex="-1" data-case-tab="memberships">
+                <span class="case-tab-index">02</span>
+                <span class="case-tab-name">Абонементы</span>
+                <span class="case-tab-indicator" aria-hidden="true"></span>
+              </button>
+              <button id="tab-services" type="button" role="tab" aria-selected="false" aria-controls="panel-services" tabindex="-1" data-case-tab="services">
+                <span class="case-tab-index">03</span>
+                <span class="case-tab-name">Регулярные услуги</span>
+                <span class="case-tab-indicator" aria-hidden="true"></span>
+              </button>
+              <button id="tab-other" type="button" role="tab" aria-selected="false" aria-controls="panel-other" tabindex="-1" data-case-tab="other">
+                <span class="case-tab-index">04</span>
+                <span class="case-tab-name">Другие модели</span>
+                <span class="case-tab-indicator" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="case-panels">
+              <article id="panel-subscriptions" class="case-panel" role="tabpanel" aria-labelledby="tab-subscriptions" data-case-panel="subscriptions">
+                <div class="object-icon object-icon-subscription" aria-hidden="true">
+                  <div class="object-icon-shell">
+                    <span class="object-ring ring-one"></span>
+                    <span class="object-ring ring-two"></span>
+                    <span class="object-core"></span>
+                  </div>
+                </div>
+                <div class="case-panel-copy">
+                  <p class="case-kicker">Подписочная модель</p>
+                  <h3>Регулярные платежи для подписок</h3>
+                  <p>Для компаний, где доступ к продукту или сервису связан с повторяющейся оплатой.</p>
+                </div>
+              </article>
+
+              <article id="panel-memberships" class="case-panel" role="tabpanel" aria-labelledby="tab-memberships" data-case-panel="memberships" hidden>
+                <div class="object-icon object-icon-membership" aria-hidden="true">
+                  <div class="object-icon-shell">
+                    <span class="membership-bar bar-one"></span>
+                    <span class="membership-bar bar-two"></span>
+                    <span class="membership-bar bar-three"></span>
+                  </div>
+                </div>
+                <div class="case-panel-copy">
+                  <p class="case-kicker">Абонементы</p>
+                  <h3>Фитнес, образование и другие форматы</h3>
+                  <p>Для бизнеса, который принимает регулярную оплату за абонемент или период доступа.</p>
+                </div>
+              </article>
+
+              <article id="panel-services" class="case-panel" role="tabpanel" aria-labelledby="tab-services" data-case-panel="services" hidden>
+                <div class="object-icon object-icon-service" aria-hidden="true">
+                  <div class="object-icon-shell">
+                    <span class="service-wave wave-one"></span>
+                    <span class="service-wave wave-two"></span>
+                    <span class="service-wave wave-three"></span>
+                  </div>
+                </div>
+                <div class="case-panel-copy">
+                  <p class="case-kicker">Регулярные услуги</p>
+                  <h3>Интернет, телеком, охрана и сервис</h3>
+                  <p>Для компаний, где услуга продолжается, а платёж повторяется по регулярной модели.</p>
+                </div>
+              </article>
+
+              <article id="panel-other" class="case-panel" role="tabpanel" aria-labelledby="tab-other" data-case-panel="other" hidden>
+                <div class="object-icon object-icon-other" aria-hidden="true">
+                  <div class="object-icon-shell">
+                    <span class="other-node node-one"></span>
+                    <span class="other-node node-two"></span>
+                    <span class="other-node node-three"></span>
+                    <span class="other-link link-one"></span>
+                    <span class="other-link link-two"></span>
+                  </div>
+                </div>
+                <div class="case-panel-copy">
+                  <p class="case-kicker">Другие recurring-модели</p>
+                  <h3>Если оплата повторяется — обсудим подключение</h3>
+                  <p>Оставьте заявку и опишите модель бизнеса. Следующий шаг определим после связи.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section connection-section" id="connection" aria-labelledby="connection-title">
+        <div class="page-shell">
+          <div class="section-heading section-heading-row reveal">
+            <div>
+              <p class="eyebrow"><span></span>Подключение</p>
+              <h2 id="connection-title">От заявки до запуска — <em>шесть этапов.</em></h2>
+            </div>
+            <p>Показываем только подтверждённую механику. Решение о подключении принимается после банковского комплаенса.</p>
+          </div>
+
+          <ol class="connection-rail reveal">
+            <li>
+              <span class="step-index">01</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Заявка</strong><small>Начинаем с контакта</small></div>
+            </li>
+            <li>
+              <span class="step-index">02</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Документы</strong><small>Пакет юридического лица</small></div>
+            </li>
+            <li>
+              <span class="step-index">03</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Комплаенс</strong><small>Проверка в банке</small></div>
+            </li>
+            <li>
+              <span class="step-index">04</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Одобрение</strong><small>Решение банка</small></div>
+            </li>
+            <li class="step-accent">
+              <span class="step-index">05</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Подключение</strong><small>Технически — до недели</small></div>
+            </li>
+            <li>
+              <span class="step-index">06</span>
+              <div class="step-marker"><span></span></div>
+              <div class="step-copy"><strong>Запуск</strong><small>Регулярные платежи через СБП</small></div>
+            </li>
+          </ol>
+
+          <div class="settlement-note reveal">
+            <div class="settlement-symbol" aria-hidden="true">
+              <span class="settlement-ring"></span>
+              <span class="settlement-dot"></span>
+            </div>
+            <div>
+              <p>После запуска</p>
+              <strong>Выплаты T+3 напрямую от НКО</strong>
+            </div>
+            <span class="settlement-code">SETTLEMENT · T+3</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section application-section" id="application" aria-labelledby="application-title">
+        <div class="application-glow" aria-hidden="true"></div>
+        <div class="page-shell application-layout">
+          <div class="application-copy reveal">
+            <p class="eyebrow"><span></span>Заявка</p>
+            <h2 id="application-title">Начнём с <em>контакта.</em></h2>
+            <p>Оставьте имя, компанию и удобный способ связи. После заявки запросим пакет документов юридического лица.</p>
+            <div class="application-trust">
+              <svg viewBox="0 0 28 28" aria-hidden="true">
+                <path d="M14 3.5 23 7v6.3c0 5.1-3.7 9.6-9 11.2-5.3-1.6-9-6.1-9-11.2V7l9-3.5Z"></path>
+                <path d="m10.2 14 2.4 2.4 5.2-5.2"></path>
+              </svg>
+              <span>Данные передаются только после успешной отправки формы.</span>
+            </div>
+          </div>
+
+          <form class="application-form reveal" data-application-form novalidate>
+            <div class="form-head">
+              <span>Заявка на подключение</span>
+              <span class="form-status-dot" aria-hidden="true"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required />
+              <small>Как к вам обращаться</small>
+            </div>
+
+            <div class="form-field">
+              <label for="company">Компания</label>
+              <input id="company" name="company" type="text" autocomplete="organization" minlength="2" maxlength="120" required />
+              <small>Название юридического лица или бренда</small>
+            </div>
+
+            <div class="form-field">
+              <label for="contact">Контакт</label>
+              <input id="contact" name="contact" type="text" autocomplete="email" minlength="3" maxlength="160" required />
+              <small>Телефон, email или Telegram</small>
+            </div>
+
+            <input type="hidden" name="utm_source" />
+            <input type="hidden" name="utm_medium" />
+            <input type="hidden" name="utm_campaign" />
+            <input type="hidden" name="utm_content" />
+            <input type="hidden" name="utm_term" />
+
+            <label class="consent-check">
+              <input type="checkbox" name="consent" required />
+              <span class="custom-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 14 14"><path d="m3 7 2.4 2.4L11 4"></path></svg>
+              </span>
+              <span>Соглашаюсь на <a href="consent.html">обработку персональных данных</a> и принимаю <a href="privacy.html">политику конфиденциальности</a>.</span>
+            </label>
+
+            <button class="button button-submit magnetic-control" type="submit" data-submit data-magnetic>
+              <span data-submit-label>Отправить заявку</span>
+              <span class="button-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M4.5 10h10M10.5 6l4 4-4 4"></path></svg>
+              </span>
+            </button>
+
+            <div class="form-response" data-form-response aria-live="polite" role="status"></div>
+            <div class="form-fallback" data-form-fallback hidden>
+              <button type="button" data-copy-application>Скопировать данные заявки</button>
+              <button type="button" data-retry-application>Повторить отправку</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="page-shell faq-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span></span>FAQ</p>
+            <h2 id="faq-title">Коротко о <em>главном.</em></h2>
+          </div>
+
+          <div class="faq-list reveal">
+            <details>
+              <summary><span>Для какого бизнеса подходит Bill.su?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Для компаний с подписками, абонементами, регулярными услугами и другими моделями, где платёж повторяется.</p>
+            </details>
+            <details>
+              <summary><span>Как проходит подключение?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Заявка, пакет документов юридического лица, комплаенс в банке, одобрение банка, техническое подключение и запуск.</p>
+            </details>
+            <details>
+              <summary><span>Сколько занимает техническое подключение?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Техническое подключение занимает до недели после прохождения предыдущих этапов.</p>
+            </details>
+            <details>
+              <summary><span>Как проходят выплаты?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Выплаты проходят по схеме T+3 напрямую от НКО.</p>
+            </details>
+            <details>
+              <summary><span>Какие документы понадобятся?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Понадобится пакет документов юридического лица. Точный состав уточняется после заявки.</p>
+            </details>
+            <details>
+              <summary><span>Где узнать тарифы и комиссию?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+              <p>Коммерческие условия на сайте пока не опубликованы. Их можно уточнить после заявки.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">
+        <div class="footer-main">
+          <div>
+            <a class="wordmark footer-wordmark" href="#top" aria-label="Bill.su — наверх">
+              <span class="wordmark-mark" aria-hidden="true">b<span>.</span></span>
+              <span class="wordmark-text">bill<span>.</span>su</span>
+            </a>
+            <p>Регулярные платежи через СБП для бизнеса.</p>
+          </div>
+          <nav aria-label="Навигация в подвале">
+            <strong>Продукт</strong>
+            <a href="#product">Что делает Bill.su</a>
+            <a href="#cases">Для кого</a>
+            <a href="#connection">Подключение</a>
+          </nav>
+          <nav aria-label="Юридические документы">
+            <strong>Документы</strong>
+            <a href="offer.html">Оферта</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="consent.html">Согласие на обработку данных</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Bill.su</span>
+          <a class="studio-credit" href="https://github.com/Tonivecher" target="_blank" rel="noopener noreferrer">
+            <span>Разработано</span>
+            <strong>TonyVecher AI Lab</strong>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg>
+          </a>
+          <a class="back-to-top" href="#top" aria-label="Вернуться наверх">
+            <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 15V4M5.5 7.5 9 4l3.5 3.5"></path></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

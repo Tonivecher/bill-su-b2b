@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#07100d" />
+    <meta name="description" content="Согласие на обработку персональных данных на сайте Bill.su." />
+    <title>Согласие на обработку персональных данных — Bill.su</title>
+    <link rel="canonical" href="https://bill.su/consent.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var saved = localStorage.getItem("bill-theme");
+          document.documentElement.dataset.theme = saved || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        } catch (_error) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body class="legal-page">
+    <!-- LEGAL_REQUIRED_BEFORE_LIVE_COLLECTION: реквизиты оператора персональных данных, email для отзыва согласия, подтверждённый перечень обработчиков и срок хранения. -->
+    <a class="skip-link" href="#legal-main">Перейти к документу</a>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="legal-header">
+      <div class="legal-header-inner">
+        <a class="wordmark" href="index.html" aria-label="Bill.su — на главную">
+          <span class="wordmark-mark" aria-hidden="true">b<span>.</span></span>
+          <span class="wordmark-text">bill<span>.</span>su</span>
+        </a>
+        <div class="legal-header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Включить светлую тему">
+            <span class="theme-toggle-track" aria-hidden="true">
+              <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3"></path></svg>
+              <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24"><path d="M20 15.2A8 8 0 0 1 8.8 4a8.2 8.2 0 1 0 11.2 11.2Z"></path></svg>
+              <span class="theme-toggle-thumb"></span>
+            </span>
+          </button>
+          <a class="legal-back" href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"></path></svg><span>На главную</span></a>
+        </div>
+      </div>
+    </header>
+    <main class="legal-main" id="legal-main">
+      <div class="legal-hero">
+        <p class="eyebrow"><span></span>Юридические документы</p>
+        <h1>Согласие на обработку данных</h1>
+        <p>Текст согласия, которое пользователь подтверждает перед отправкой заявки.</p>
+      </div>
+      <div class="legal-content">
+        <section>
+          <h2>1. Согласие</h2>
+          <p>Устанавливая отметку в форме и отправляя заявку, пользователь свободно, своей волей и в своём интересе соглашается на обработку указанных им персональных данных владельцем сервиса Bill.su.</p>
+        </section>
+        <section>
+          <h2>2. Состав данных</h2>
+          <p>Согласие распространяется на имя, название компании, телефон, email или Telegram, а также на UTM-метки, если они присутствуют в адресе страницы.</p>
+        </section>
+        <section>
+          <h2>3. Цели</h2>
+          <p>Цель обработки — связаться с пользователем, рассмотреть заявку, уточнить модель бизнеса, запросить пакет документов юридического лица и организовать этапы подключения.</p>
+        </section>
+        <section>
+          <h2>4. Действия с данными</h2>
+          <p>Согласие включает сбор, запись, систематизацию, хранение, уточнение, использование, передачу при наличии законного основания, блокирование и удаление данных.</p>
+        </section>
+        <section>
+          <h2>5. Срок действия и отзыв</h2>
+          <p>Согласие действует до достижения цели обработки или его отзыва, если применимое законодательство не требует иного срока хранения. Согласие может быть отозвано письменным обращением оператору.</p>
+        </section>
+        <section>
+          <h2>6. Дополнительная информация</h2>
+          <p>Подробности описаны в <a href="privacy.html">политике конфиденциальности</a>. Отправка заявки не гарантирует банковское одобрение и сама по себе не заключает договор.</p>
+        </section>
+        <p class="legal-date">Редакция от 25 августа 2026 года.</p>
+      </div>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
