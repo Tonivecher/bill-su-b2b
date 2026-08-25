@@ -1,0 +1,357 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/*
+ * Bill.su — «Графитовый разворот»
+ * Две темы: нейтральный графит (dark) и тёплый серебристо-молочный (light).
+ * Зелёный — только смысловой акцент.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 14px);
+  --radius-3xl: calc(var(--radius) + 22px);
+
+  --font-display: "Unbounded", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Onest", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-hairline: var(--hairline);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-lift: var(--lift);
+}
+
+/* ---------- Dark: нейтральный графит (тема по умолчанию) ---------- */
+:root,
+html.dark {
+  --radius: 0.75rem;
+  color-scheme: dark;
+
+  --background: oklch(0.185 0.007 255);
+  --foreground: oklch(0.955 0.004 250);
+  --surface: oklch(0.222 0.008 255);
+  --surface-2: oklch(0.258 0.009 255);
+
+  --card: oklch(0.222 0.008 255);
+  --card-foreground: oklch(0.955 0.004 250);
+  --popover: oklch(0.222 0.008 255);
+  --popover-foreground: oklch(0.955 0.004 250);
+
+  --primary: oklch(0.955 0.004 250);
+  --primary-foreground: oklch(0.185 0.007 255);
+
+  --secondary: oklch(0.258 0.009 255);
+  --secondary-foreground: oklch(0.955 0.004 250);
+
+  --muted: oklch(0.258 0.009 255);
+  --muted-foreground: oklch(0.72 0.008 255);
+
+  /* смысловой акцент — сдержанный зелёный */
+  --accent: oklch(0.78 0.15 158);
+  --accent-foreground: oklch(0.18 0.02 158);
+
+  --destructive: oklch(0.72 0.15 25);
+  --destructive-foreground: oklch(0.18 0.01 25);
+
+  --border: oklch(1 0 0 / 9%);
+  --hairline: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.78 0.15 158 / 60%);
+
+  --grid-line: oklch(1 0 0 / 4.5%);
+  --selection: oklch(0.78 0.15 158 / 25%);
+
+  --lift:
+    0 1px 0 0 oklch(1 0 0 / 6%) inset, 0 18px 40px -24px oklch(0 0 0 / 70%),
+    0 4px 12px -8px oklch(0 0 0 / 50%);
+}
+
+/* ---------- Light: тёплый серебристо-молочный ---------- */
+html.light {
+  color-scheme: light;
+
+  --background: oklch(0.972 0.004 85);
+  --foreground: oklch(0.235 0.008 255);
+  --surface: oklch(0.945 0.005 85);
+  --surface-2: oklch(0.915 0.006 85);
+
+  --card: oklch(0.988 0.003 85);
+  --card-foreground: oklch(0.235 0.008 255);
+  --popover: oklch(0.988 0.003 85);
+  --popover-foreground: oklch(0.235 0.008 255);
+
+  --primary: oklch(0.235 0.008 255);
+  --primary-foreground: oklch(0.985 0.003 85);
+
+  --secondary: oklch(0.925 0.005 85);
+  --secondary-foreground: oklch(0.235 0.008 255);
+
+  --muted: oklch(0.925 0.005 85);
+  --muted-foreground: oklch(0.455 0.01 255);
+
+  --accent: oklch(0.52 0.115 158);
+  --accent-foreground: oklch(0.985 0.005 158);
+
+  --destructive: oklch(0.52 0.17 25);
+  --destructive-foreground: oklch(0.985 0.005 25);
+
+  --border: oklch(0.235 0.008 255 / 12%);
+  --hairline: oklch(0.235 0.008 255 / 15%);
+  --input: oklch(0.235 0.008 255 / 20%);
+  --ring: oklch(0.52 0.115 158 / 55%);
+
+  --grid-line: oklch(0.235 0.008 255 / 6%);
+  --selection: oklch(0.52 0.115 158 / 18%);
+
+  --lift:
+    0 1px 0 0 oklch(1 0 0 / 70%) inset, 0 20px 44px -28px oklch(0.24 0.01 255 / 26%),
+    0 4px 12px -8px oklch(0.24 0.01 255 / 14%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition:
+      background-color 0.6s ease,
+      color 0.6s ease;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+
+  /* Видимый focus-ring для keyboard-навигации, без двойного кольца на полях ввода */
+  *:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+  }
+}
+
+@utility hairline-t {
+  border-top: 1px solid var(--hairline);
+}
+
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility grid-bg {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Очень медленное постоянное микродвижение */
+@keyframes bill-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bill-drift-x {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(6px, 5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bill-breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes bill-dash {
+  to {
+    stroke-dashoffset: -280;
+  }
+}
+
+@utility drift-slow {
+  animation: bill-drift 26s ease-in-out infinite;
+  will-change: transform;
+}
+
+@utility drift-slower {
+  animation: bill-drift-x 38s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes bill-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -4px, 0) rotate(0.35deg);
+  }
+}
+
+@utility float-soft {
+  animation: bill-float 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Мягкое дыхание зелёной точки логотипа */
+@keyframes bill-dot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.92;
+  }
+}
+
+@utility dot-pulse {
+  display: inline-block;
+  transform-origin: center;
+  animation: bill-dot-pulse 3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@utility breathe {
+  animation: bill-breathe 18s ease-in-out infinite;
+}
+
+/* Connected Field: медленное вращение орбит и бег импульса по связям */
+@keyframes bill-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility orbit-slow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bill-orbit 90s linear infinite;
+}
+
+@utility orbit-slower {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bill-orbit 150s linear infinite reverse;
+}
+
+/* Смена вкладок внутри мока: короткий мягкий crossfade + слайд */
+@keyframes bill-panel-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@utility bill-panel-in {
+  animation: bill-panel-in 320ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-soft,
+  .dot-pulse,
+  .drift-slow,
+  .drift-slower,
+  .breathe,
+  .bill-panel-in,
+  .orbit-slow,
+  .orbit-slower {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
