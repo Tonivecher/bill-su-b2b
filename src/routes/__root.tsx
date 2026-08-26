@@ -11,6 +11,7 @@ import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { themeBootstrapScript } from "../lib/theme";
+import { PreviewWatermark } from "../components/preview/PreviewWatermark";
 import { ThemeProvider } from "../components/theme/ThemeToggle";
 
 function NotFoundComponent() {
@@ -128,6 +129,7 @@ function RootComponent() {
       <ThemeProvider>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
+        <PreviewWatermark />
       </ThemeProvider>
     </QueryClientProvider>
   );

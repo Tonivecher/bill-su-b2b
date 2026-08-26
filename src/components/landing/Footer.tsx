@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline bg-surface/30">
       <div className="mx-auto max-w-[1240px] px-5 py-14 sm:px-8 sm:py-20">
-        <div className="flex flex-col gap-10 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="max-w-[38ch]">
             <Wordmark className="text-xl" />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -15,7 +15,7 @@ export function Footer() {
           </div>
 
           <nav
-            className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm sm:gap-x-16"
+            className="grid grid-cols-1 gap-8 text-sm sm:grid-cols-2 sm:gap-x-16 sm:gap-y-3"
             aria-label="Подвал"
           >
             <div className="flex flex-col gap-3">
